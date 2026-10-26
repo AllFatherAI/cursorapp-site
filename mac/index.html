@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'">
+<meta name="color-scheme" content="light dark">
+<title>CursorApp Helper for Mac</title>
+<meta name="description" content="CursorApp Helper lets your iPhone control your Mac: trackpad, keys and text. Free, signed and notarized.">
+<link rel="stylesheet" href="style.css">
+<script src="page.js" defer></script>
+</head>
+<body>
+<header class="bar">
+  <span class="brand">CursorApp</span>
+  <nav class="langs" aria-label="Language / Язык">
+    <a href="?lang=ru" id="to-ru" hreflang="ru" lang="ru">Русский</a>
+    <a href="?lang=en" id="to-en" hreflang="en" lang="en">English</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero" aria-labelledby="h-title">
+    <h1 id="h-title"><span lang="ru">CursorApp Helper для Mac</span><span lang="en">CursorApp Helper for Mac</span></h1>
+    <p class="lead"><span lang="ru">Бесплатная программа в строке меню: iPhone управляет курсором, клавишами и текстом на этом Mac.</span><span lang="en">A free menu bar app that lets your iPhone control the cursor, keys and text on this Mac.</span></p>
+
+    <div class="download">
+      <a class="button" id="download" role="button" aria-disabled="true">
+        <span lang="ru" data-label>Скоро</span><span lang="en" data-label>Coming soon</span>
+      </a>
+      <p class="meta" id="meta" aria-live="polite"></p>
+    </div>
+    <noscript>
+      <p><a href="https://github.com/AllFatherAI/cursorapp-site/releases">
+        <span lang="ru">Скачать со страницы выпусков</span><span lang="en">Download from the Releases page</span></a></p>
+    </noscript>
+    <p class="meta" id="sha-box" hidden><span lang="ru">SHA-256:</span><span lang="en">SHA-256:</span> <code id="sha" dir="ltr"></code></p>
+  </section>
+
+  <section aria-labelledby="h-req">
+    <h2 id="h-req"><span lang="ru">Требования</span><span lang="en">Requirements</span></h2>
+    <p><span lang="ru">macOS 14 Sonoma или новее. Apple silicon и Intel.</span><span lang="en">macOS 14 Sonoma or later. Apple silicon and Intel.</span></p>
+  </section>
+
+  <section aria-labelledby="h-steps">
+    <h2 id="h-steps"><span lang="ru">Установка за четыре шага</span><span lang="en">Set up in four steps</span></h2>
+    <ol class="steps">
+      <li><span lang="ru">Скачай CursorApp Helper кнопкой выше и открой файл.</span><span lang="en">Download CursorApp Helper with the button above and open the file.</span></li>
+      <li><span lang="ru">Перетащи CursorApp Helper в «Программы».</span><span lang="en">Drag CursorApp Helper into Applications.</span></li>
+      <li><span lang="ru">Запусти его и разреши Универсальный доступ — без него Mac не послушается.</span><span lang="en">Open it and allow Accessibility — without it the Mac won’t respond.</span></li>
+      <li><span lang="ru">В меню CursorApp Helper выбери «Pair a Phone…» (в русской системе — «Подключить телефон…»), а на iPhone нажми «Искать».</span><span lang="en">In the CursorApp Helper menu choose “Pair a Phone…”, then tap “Search” in CursorApp on your iPhone.</span></li>
+    </ol>
+    <p><span lang="ru">В меню также есть «Open at Login» («Открывать при входе») и «Check for Updates…» («Проверить обновления…»). iPhone и Mac должны быть в одной сети Wi‑Fi.</span><span lang="en">The menu also has “Open at Login” and “Check for Updates…”. iPhone and Mac must be on the same Wi‑Fi network.</span></p>
+  </section>
+
+  <section aria-labelledby="h-faq">
+    <h2 id="h-faq"><span lang="ru">Вопросы</span><span lang="en">Questions</span></h2>
+    <details>
+      <summary><span lang="ru">Mac не слушается iPhone</span><span lang="en">The Mac doesn’t respond to my iPhone</span></summary>
+      <p><span lang="ru">Системные настройки → Конфиденциальность и безопасность → Универсальный доступ → включи CursorApp Helper.</span><span lang="en">System Settings → Privacy &amp; Security → Accessibility → turn on CursorApp Helper.</span></p>
+    </details>
+    <details>
+      <summary><span lang="ru">Я обновляюсь с самостоятельно собранной копии</span><span lang="en">I’m updating from a self-built copy</span></summary>
+      <p><span lang="ru">В Универсальном доступе удали CursorApp Helper кнопкой «−» и добавь снова: у новой копии другая подпись.</span><span lang="en">In Accessibility remove CursorApp Helper with the “−” button and add it again: the new copy has a different signature.</span></p>
+    </details>
+    <details>
+      <summary><span lang="ru">macOS 15 и новее спрашивает про локальную сеть</span><span lang="en">macOS 15 or later asks about the local network</span></summary>
+      <p><span lang="ru">Нажми «Разрешить»: без этого iPhone не найдёт Mac в сети.</span><span lang="en">Click “Allow”: without it your iPhone can’t find the Mac on the network.</span></p>
+    </details>
+    <details>
+      <summary><span lang="ru">Как удалить</span><span lang="en">How to uninstall</span></summary>
+      <p><span lang="ru">Выйди из программы через её меню, удали её из «Программ» и убери из Системные настройки → Основные → Объекты входа. Ключ в связке ключей называется «Vl.CursorAppHelper».</span><span lang="en">Quit it from its menu, delete it from Applications, and remove it in System Settings → General → Login Items. The keychain item is called “Vl.CursorAppHelper”.</span></p>
+    </details>
+  </section>
+
+  <section aria-labelledby="h-sec">
+    <h2 id="h-sec"><span lang="ru">Безопасность и приватность</span><span lang="en">Security and privacy</span></h2>
+    <ul>
+      <li><span lang="ru">Подписана Developer ID «Vladislav Sukhov (Y3SRRD5QMG)» и нотаризована Apple.</span><span lang="en">Signed with Developer ID “Vladislav Sukhov (Y3SRRD5QMG)” and notarized by Apple.</span></li>
+      <li><span lang="ru">Каждое обновление подписано (EdDSA) и проверяется до распаковки.</span><span lang="en">Every update is signed (EdDSA) and checked before it is unpacked.</span></li>
+      <li><span lang="ru">Аналитики нет. Проверка обновлений сообщает GitHub IP-адрес и версию помощника.</span><span lang="en">No analytics. Update checks tell GitHub your IP address and the helper version.</span></li>
+      <li><span lang="ru">Чтобы сверить скачанный файл, выполни в Терминале <code dir="ltr">shasum -a 256 путь/к/файлу.dmg</code> и сравни с числом SHA-256 выше.</span><span lang="en">To verify the download, run <code dir="ltr">shasum -a 256 path/to/file.dmg</code> in Terminal and compare it with the SHA-256 above.</span></li>
+    </ul>
+  </section>
+</main>
+
+<footer><p><span lang="ru">CursorApp — пульт для iPhone. Страница не использует внешние шрифты, скрипты и аналитику.</span><span lang="en">CursorApp is a remote for iPhone. This page uses no external fonts, scripts or analytics.</span></p></footer>
+</body>
+</html>
