@@ -7,8 +7,7 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
         <title>CursorApp Helper</title>
         <item>
             <title>1.0.1</title>
-            <pubDate>Sun, 25 Oct 2026 21:38:35 -0700</pubDate>
-            <sparkle:channel>staging</sparkle:channel>
+            <pubDate>Sun, 25 Oct 2026 21:43:34 -0700</pubDate>
             <sparkle:version>1001</sparkle:version>
             <sparkle:shortVersionString>1.0.1</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
@@ -27,6 +26,6 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
         </item>
     </channel>
 </rss><!-- sparkle-signatures:
-edSignature: CTf0yn8oVvLbEjC++oRuiIjhepdRTzleV4M1ZEoxMThtLA9CKwBuFpJNeYIi62KvFfXzPtnaTDhMJFB2rym8Dw==
-length: 2349
+edSignature: lxPO+KncFyAMDDr1XwlrvCll+/yhAOveUIjaCLk05jJSIVzRvNtHIl2NU+fAnsqbg4+yfXaWLvMzcruF0kF1Cg==
+length: 2294
 -->
