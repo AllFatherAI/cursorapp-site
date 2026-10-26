@@ -1,8 +1,20 @@
-<?xml version="1.0" standalone="yes"?><!-- sparkle-sign-warning:
+<?xml version="1.0" standalone="yes"?>
+<!-- sparkle-sign-warning:
 IMPORTANT: This file was signed by Sparkle. Any modifications to this file requires re-signing this file with generate_appcast or sign_update! The signed signature will be embedded at the end of this file.
---><rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
+-->
+<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
     <channel>
         <title>CursorApp Helper</title>
+        <item>
+            <title>1.0.1</title>
+            <pubDate>Sun, 25 Oct 2026 21:38:35 -0700</pubDate>
+            <sparkle:channel>staging</sparkle:channel>
+            <sparkle:version>1001</sparkle:version>
+            <sparkle:shortVersionString>1.0.1</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <sparkle:releaseNotesLink sparkle:edSignature="jTcU43CieeJCJE1gN1EqMD64vmJ0xvpqy+Ih2cwTjCalgtyQr+ZRifo41OYmxKbDaREEbbMhoaCbFRxIiQ++AQ==" sparkle:length="1135">https://allfatherai.github.io/cursorapp-site/mac/CursorApp-Helper-1.0.1.md</sparkle:releaseNotesLink>
+            <enclosure url="https://github.com/AllFatherAI/cursorapp-site/releases/download/helper-1.0.1/CursorApp-Helper-1.0.1.dmg" length="1792647" type="application/octet-stream" sparkle:edSignature="Jdb8udwyoxM9Jil+ZXwLQTo1PsqpCpEQogEhuwJC7M/PswZYU9JKTBjIi+cTXMWLFeesqy59aj6bX3/YdvV8BQ=="/>
+        </item>
         <item>
             <title>1.0.0</title>
             <pubDate>Sun, 25 Oct 2026 17:06:44 -0700</pubDate>
@@ -11,10 +23,10 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
             <sparkle:shortVersionString>1.0.0</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <sparkle:releaseNotesLink sparkle:edSignature="XEeAe+4FxfKDIOimfWNzeS/EQNmx8QAXiywJV+u0ZS0fGxmTuKAOLgkQyKFgSOM+qYYfhxqTUsR2n8hHUbK+Cg==" sparkle:length="2248">https://allfatherai.github.io/cursorapp-site/mac/CursorApp-Helper-1.0.0.md</sparkle:releaseNotesLink>
-            <enclosure url="https://github.com/AllFatherAI/cursorapp-site/releases/download/helper-1.0.0/CursorApp-Helper-1.0.0.dmg" length="1790190" type="application/octet-stream" sparkle:edSignature="yAxtTHEpKX5njmeYZ/W5EJdssyHwhDLgb83Kzh7eX/naGIvBXc0KwUFZCOphLstbFCSSLHtINSp0DOZShGIaAA=="></enclosure>
+            <enclosure url="https://github.com/AllFatherAI/cursorapp-site/releases/download/helper-1.0.0/CursorApp-Helper-1.0.0.dmg" length="1790190" type="application/octet-stream" sparkle:edSignature="yAxtTHEpKX5njmeYZ/W5EJdssyHwhDLgb83Kzh7eX/naGIvBXc0KwUFZCOphLstbFCSSLHtINSp0DOZShGIaAA=="/>
         </item>
     </channel>
 </rss><!-- sparkle-signatures:
-edSignature: bBTbacuJA0BIIi0yc6GlYcbCmxNdfXppiZEGy+eLpgevDjCaikk7j/2kA60Q8Rk4Ykl9ZR8NYguTpSx3zcW5Dw==
-length: 1403
+edSignature: CTf0yn8oVvLbEjC++oRuiIjhepdRTzleV4M1ZEoxMThtLA9CKwBuFpJNeYIi62KvFfXzPtnaTDhMJFB2rym8Dw==
+length: 2349
 -->
