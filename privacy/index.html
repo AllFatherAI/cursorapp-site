@@ -8,15 +8,18 @@
 <title>CursorApp Privacy Policy</title>
 <meta name="description" content="CursorApp collects no personal data. Everything stays on your devices.">
 <link rel="stylesheet" href="../mac/style.css">
-<script src="lang.js" defer></script>
+<script src="../lang.js" defer></script>
 </head>
-<body>
+<body class="legal">
 <header class="bar">
-  <span class="brand">CursorApp</span>
-  <nav class="langs" aria-label="Language / Язык">
-    <a href="?lang=ru" id="to-ru" hreflang="ru" lang="ru">Русский</a>
-    <a href="?lang=en" id="to-en" hreflang="en" lang="en">English</a>
-  </nav>
+  <a class="brand" href="../mac/" data-localized-link>CursorApp<span class="brand-dot" aria-hidden="true"></span></a>
+  <label class="language-picker">
+    <span class="sr-only"><span lang="ru">Язык</span><span lang="en">Language</span></span>
+    <select id="language" name="lang">
+      <option value="en" lang="en">English</option>
+      <option value="ru" lang="ru">Русский</option>
+    </select>
+  </label>
 </header>
 
 <main>

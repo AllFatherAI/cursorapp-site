@@ -1,46 +1,36 @@
-// Язык и кнопка загрузки. Без внешних запросов: только latest.json с этого же адреса (CSP default-src 'self').
+// Accept only a complete manifest for this repository's immutable release asset.
 (function () {
   "use strict";
-  var params = new URLSearchParams(location.search);
-  var asked = params.get("lang");
-  var lang = asked === "ru" || asked === "en" ? asked
-    : ((navigator.language || "en").toLowerCase().indexOf("ru") === 0 ? "ru" : "en");
-  document.documentElement.lang = lang;
-  ["ru", "en"].forEach(function (code) {
-    var link = document.getElementById("to-" + code);
-    if (!link) return;
-    if (code === lang) link.setAttribute("aria-current", "true"); else link.removeAttribute("aria-current");
-  });
-
+  var lang = document.documentElement.lang;
   var text = {
-    ru: { soon: "Скоро", get: "Скачать", size: "МБ", version: "Версия", mac: function (v) { return "macOS " + v + " или новее"; } },
-    en: { soon: "Coming soon", get: "Download", size: "MB", version: "Version", mac: function (v) { return "macOS " + v + " or later"; } }
+    ru: { get: "Скачать для Mac", size: "МБ", version: "Версия", unavailable: "Загрузка недоступна", retry: "Открой страницу выпусков ниже." },
+    en: { get: "Download for Mac", size: "MB", version: "Version", unavailable: "Download unavailable", retry: "Open the releases page below." }
   }[lang];
-
   var button = document.getElementById("download");
   var meta = document.getElementById("meta");
-  var shaBox = document.getElementById("sha-box");
-  var sha = document.getElementById("sha");
-
   function setLabel(value) {
-    // Подписи кнопки уже в разметке на обоих языках; меняем только видимую ветку
-    var spans = button.querySelectorAll("[data-label]");
-    for (var i = 0; i < spans.length; i++) if (spans[i].lang === lang) spans[i].textContent = value;
+    button.querySelectorAll("[data-label]").forEach(function (span) {
+      if (span.lang === lang) span.textContent = value;
+    });
   }
-
   fetch("latest.json", { cache: "no-cache" })
-    .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then(function (response) { if (!response.ok) throw new Error("manifest"); return response.json(); })
     .then(function (info) {
-      if (!info || info.version === "0.0.0" || !info.url) return;   // до первого выпуска — «Скоро», кнопка выключена
-      button.href = info.url;
+      if (!info || !/^\d+\.\d+(?:\.\d+)?$/.test(info.version) || info.version === "0.0.0"
+        || !Number.isSafeInteger(info.build) || info.build <= 0
+        || !Number.isSafeInteger(info.size) || info.size <= 0
+        || !/^[a-f0-9]{64}$/i.test(info.sha256)
+        || !/^\d+(?:\.\d+){0,2}$/.test(info.minimumSystemVersion)) throw new Error("manifest");
+      var expected = "https://github.com/AllFatherAI/cursorapp-site/releases/download/helper-" + info.version
+        + "/CursorApp-Helper-" + info.version + ".dmg";
+      if (info.url !== expected) throw new Error("asset");
+      button.href = expected;
       button.removeAttribute("aria-disabled");
       button.setAttribute("download", "");
-      setLabel(text.get + " " + info.version);
-      var mb = info.size ? (info.size / 1048576).toFixed(1) + " " + text.size + " · " : "";
-      // minimumSystemVersion — из Info.plist выпуска (release-helper.sh): «14.0» → «14»
-      var minimum = String(info.minimumSystemVersion || "14").replace(/\.0$/, "");
-      meta.textContent = text.version + " " + info.version + " · " + mb + text.mac(minimum);
-      if (info.sha256) { sha.textContent = info.sha256; shaBox.hidden = false; }
+      setLabel(text.get);
+      meta.textContent = text.version + " " + info.version + " · " + (info.size / 1048576).toFixed(1) + " " + text.size;
+      document.getElementById("sha").textContent = info.sha256;
+      document.getElementById("sha-box").hidden = false;
     })
-    .catch(function () { /* страница остаётся в состоянии «Скоро» */ });
+    .catch(function () { setLabel(text.unavailable); meta.textContent = text.retry; });
 })();
