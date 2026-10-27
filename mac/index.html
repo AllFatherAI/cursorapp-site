@@ -1,61 +1,81 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'">
-<meta name="color-scheme" content="light dark">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#ffffff">
 <title>CursorApp Helper for Mac</title>
-<meta name="description" content="Use your iPhone as a trackpad and keyboard for your Mac. Download CursorApp Helper and pair your phone in three steps.">
-<link rel="stylesheet" href="style.css">
-<script src="../lang.js" defer></script>
-<script src="page.js" defer></script>
+<meta name="description" content="Turn your iPhone into a trackpad and keyboard for your Mac. Download the free CursorApp Helper.">
+<link rel="icon" href="assets/brand-mark.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css?v=20261027.1">
+<script src="locales.js?v=20261027.1" defer></script>
+<script src="page.js?v=20261027.1" defer></script>
 </head>
 <body>
-<header class="bar">
-  <a class="brand" href="../mac/" data-localized-link>CursorApp<span class="brand-dot" aria-hidden="true"></span></a>
-  <label class="language-picker">
-    <span class="sr-only"><span lang="ru">Язык</span><span lang="en">Language</span></span>
-    <select id="language" name="lang">
-      <option value="en" lang="en">English</option>
-      <option value="ru" lang="ru">Русский</option>
-    </select>
-  </label>
+<a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
+<header class="site-header">
+  <div class="bar frame">
+    <a class="brand" href="./" data-localized-link data-i18n-label="brandLabel" aria-label="CursorApp — home" dir="ltr"><svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M7.5 4.5v22l6.4-6.4 4.4 9.4 4.1-1.9-4.5-9.4h9.1L7.5 4.5Z"/></svg><span>CursorApp</span></a>
+    <nav class="navigation" data-i18n-label="navLabel" aria-label="Navigation"><a href="#setup" data-i18n="navSetup">Setup</a><a href="#help" data-i18n="navHelp">Help</a></nav>
+    <label class="language-picker">
+      <span class="sr-only" data-i18n="language">Language</span>
+      <svg class="globe" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="7.2"/><ellipse cx="10" cy="10" rx="3" ry="7.2"/><path d="M3 10h14"/></svg>
+      <select id="language" name="lang">
+        <option value="en" lang="en">English</option><option value="ru" lang="ru">Русский</option><option value="es" lang="es">Español</option><option value="pt-BR" lang="pt-BR">Português</option><option value="fr" lang="fr">Français</option><option value="de" lang="de">Deutsch</option><option value="zh-Hans" lang="zh-Hans">简体中文</option><option value="hi" lang="hi">हिन्दी</option><option value="ar" lang="ar">العربية</option><option value="ja" lang="ja">日本語</option><option value="ko" lang="ko">한국어</option>
+      </select>
+      <svg class="select-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="m4 6 4 4 4-4"/></svg>
+    </label>
+  </div>
 </header>
-<main>
+<main id="main">
   <section class="hero" aria-labelledby="h-title">
-    <p class="eyebrow">CursorApp Helper · Mac</p>
-    <h1 id="h-title"><span lang="ru">Управляй Mac.<br>С iPhone.</span><span lang="en">Control your Mac.<br>From your iPhone.</span></h1>
-    <p class="lead"><span lang="ru">Курсор, прокрутка, клавиши и текст — прямо с телефона. Установи Helper на Mac и подключи его в CursorApp.</span><span lang="en">Move the cursor, scroll, type and press keys from your phone. Install Helper on your Mac, then connect in CursorApp.</span></p>
-    <div class="download">
-      <a class="button" id="download" aria-disabled="true"><span lang="ru" data-label>Проверяем загрузку…</span><span lang="en" data-label>Checking download…</span><span aria-hidden="true">↓</span></a>
-      <p class="meta" id="meta" aria-live="polite"></p>
-      <p class="requirements"><span lang="ru">Бесплатно · macOS 14 или новее · Apple silicon и Intel</span><span lang="en">Free · macOS 14 or later · Apple silicon and Intel</span></p>
+    <div class="hero-layout frame">
+      <div class="hero-copy">
+        <h1 id="h-title"><span data-i18n="hero1">Your Mac.</span><span data-i18n="hero2">At your fingertips.</span></h1>
+        <p class="lead" data-i18n="lead">Trackpad, keyboard and shortcuts. All from your iPhone.</p>
+        <div class="actions">
+          <a class="button" id="download" href="https://github.com/AllFatherAI/cursorapp-site/releases"><span id="download-label">Download for Mac</span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 2.5v10m-4-4 4 4 4-4M3 13v4h14v-4"/></svg></a>
+          <a class="setup-link" href="#setup"><span data-i18n="setupLink">Setup guide</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="m6 3 5 5-5 5"/></svg></a>
+        </div>
+        <div class="release-info"><p id="meta" aria-live="polite"></p><p data-i18n="requirements">macOS 14 or later · Apple silicon and Intel</p></div>
+        <p class="pricing" data-i18n="pricing">Free Mac helper. Mac controls on iPhone require CursorApp Pro.</p>
+        <p id="download-fallback" hidden><a href="https://github.com/AllFatherAI/cursorapp-site/releases" data-i18n="releases">Releases on GitHub</a></p>
+        <noscript><p class="noscript-note"><a href="https://github.com/AllFatherAI/cursorapp-site/releases">Releases on GitHub</a></p></noscript>
+      </div>
+      <figure class="product-art">
+        <div class="app-preview" data-ui aria-hidden="true"><img id="product-screen" src="assets/mac-shortcuts-en.webp" width="1500" height="900" alt="" fetchpriority="high" decoding="async"></div>
+        <figcaption data-i18n="artCaption">CursorApp</figcaption>
+      </figure>
     </div>
-    <p class="release-link"><a href="https://github.com/AllFatherAI/cursorapp-site/releases"><span lang="ru">Все выпуски</span><span lang="en">All releases</span> <span aria-hidden="true">↗</span></a></p>
-    <noscript><p><span lang="ru">Скачай Helper со страницы выпусков выше.</span><span lang="en">Download Helper from the releases page above.</span></p></noscript>
   </section>
-
-  <section class="setup" aria-labelledby="h-steps">
-    <div class="section-heading"><p class="eyebrow"><span lang="ru">Начало работы</span><span lang="en">Getting started</span></p><h2 id="h-steps"><span lang="ru">Три шага — и можно управлять.</span><span lang="en">Three steps to connect.</span></h2></div>
-    <ol class="steps">
-      <li><span class="step-number" aria-hidden="true">01</span><h3><span lang="ru">Установи Helper</span><span lang="en">Install Helper</span></h3><p><span lang="ru">Открой скачанный файл, перетащи CursorApp Helper в «Программы» и запусти его.</span><span lang="en">Open the download, drag CursorApp Helper into Applications, then open it.</span></p></li>
-      <li><span class="step-number" aria-hidden="true">02</span><h3><span lang="ru">Разреши управление</span><span lang="en">Allow control</span></h3><p><span lang="ru">Включи CursorApp Helper в Системных настройках → Конфиденциальность и безопасность → Универсальный доступ.</span><span lang="en">Turn on CursorApp Helper in System Settings → Privacy &amp; Security → Accessibility.</span></p></li>
-      <li><span class="step-number" aria-hidden="true">03</span><h3><span lang="ru">Подключи iPhone</span><span lang="en">Pair your iPhone</span></h3><p><span lang="ru">В меню Helper нажми «Подключить телефон…» (Pair a Phone…). В CursorApp на iPhone нажми «Искать» и выбери Mac.</span><span lang="en">Choose “Pair a Phone…” in the Helper menu. Tap “Search” in CursorApp on your iPhone and choose your Mac.</span></p></li>
-    </ol>
-    <p class="setup-note"><span lang="ru">iPhone и Mac должны быть в одной сети Wi‑Fi. Helper остаётся в строке меню Mac.</span><span lang="en">Keep your iPhone and Mac on the same Wi‑Fi network. Helper stays in your Mac’s menu bar.</span></p>
+  <section class="setup chapter" id="setup" aria-labelledby="h-steps">
+    <div class="frame">
+      <div class="section-intro"><h2 id="h-steps" data-i18n="setupTitle">Ready in three steps.</h2><p data-i18n="setupIntro">Install Helper on your Mac and open CursorApp on your iPhone. Both devices need the same Wi-Fi network.</p></div>
+      <ol class="steps">
+        <li><h3 data-i18n="step1Title">Install Helper</h3><p data-i18n="step1Body">Open the download. Drag CursorApp Helper into Applications, then open it.</p></li>
+        <li><h3 data-i18n="step2Title">Allow control</h3><p data-i18n="step2Body">Turn on CursorApp Helper in System Settings → Privacy &amp; Security → Accessibility.</p></li>
+        <li><h3 data-i18n="step3Title">Pair your iPhone</h3><p data-i18n="step3Body">Choose “Pair a Phone…” in the Helper menu. Tap “Search” in CursorApp on your iPhone and choose your Mac.</p></li>
+      </ol>
+      <p class="setup-note" data-i18n="setupNote">Helper stays in your menu bar. Open at Login and Check for Updates… are in its menu.</p>
+    </div>
   </section>
-
-  <section class="help" aria-labelledby="h-help">
-    <div class="section-heading"><p class="eyebrow"><span lang="ru">Помощь</span><span lang="en">Help</span></p><h2 id="h-help"><span lang="ru">Если что-то не получилось</span><span lang="en">Need a hand?</span></h2></div>
-    <details><summary><span lang="ru">Mac не появляется в поиске</span><span lang="en">My Mac doesn’t appear</span></summary><p><span lang="ru">Проверь, что оба устройства в одной сети. Открой меню Helper → «Подключить телефон…». Если macOS спросит о локальной сети, нажми «Разрешить».</span><span lang="en">Check that both devices are on the same network. Open Helper → “Pair a Phone…”. If macOS asks about the local network, click “Allow”.</span></p></details>
-    <details><summary><span lang="ru">Телефон подключён, но курсор не двигается</span><span lang="en">My phone is connected, but the cursor won’t move</span></summary><p><span lang="ru">Включи CursorApp Helper в Системных настройках → Конфиденциальность и безопасность → Универсальный доступ.</span><span lang="en">Turn on CursorApp Helper in System Settings → Privacy &amp; Security → Accessibility.</span></p></details>
-    <details><summary><span lang="ru">После обновления Mac не отвечает</span><span lang="en">My Mac stopped responding after an update</span></summary><p><span lang="ru">В Универсальном доступе удали CursorApp Helper кнопкой «−» и добавь его снова из папки «Программы».</span><span lang="en">In Accessibility, remove CursorApp Helper with the “−” button, then add it again from Applications.</span></p></details>
-    <details><summary><span lang="ru">Автозапуск и обновления</span><span lang="en">Login and updates</span></summary><p><span lang="ru">«Открывать при входе» (Open at Login) и «Проверить обновления…» (Check for Updates…) находятся в меню Helper.</span><span lang="en">You’ll find “Open at Login” and “Check for Updates…” in the Helper menu.</span></p></details>
-    <details><summary><span lang="ru">Как удалить Helper</span><span lang="en">Uninstall Helper</span></summary><p><span lang="ru">Нажми «Выйти» в меню Helper и удали его из «Программ». При необходимости убери его в Системных настройках → Основные → Объекты входа.</span><span lang="en">Quit Helper from its menu and delete it from Applications. If needed, remove it in System Settings → General → Login Items.</span></p></details>
-    <details><summary><span lang="ru">Подпись и проверка файла</span><span lang="en">Signing and download verification</span></summary><p><span lang="ru">Helper подписан Developer ID Vladislav Sukhov и нотарифицирован Apple. Обновления проверяются до установки. Аналитики нет.</span><span lang="en">Helper is signed with Developer ID Vladislav Sukhov and notarized by Apple. Updates are verified before installation. There’s no analytics.</span></p><div id="sha-box" hidden><p><span lang="ru">SHA-256 скачанного файла:</span><span lang="en">Download SHA-256:</span></p><code id="sha" dir="ltr"></code><p><span lang="ru">В Терминале выполни <code dir="ltr">shasum -a 256 путь/к/файлу.dmg</code> и сравни результат.</span><span lang="en">Run <code dir="ltr">shasum -a 256 path/to/file.dmg</code> in Terminal and compare the result.</span></p></div></details>
+  <section class="help chapter" id="help" aria-labelledby="h-help">
+    <div class="frame help-layout">
+      <div class="help-intro"><h2 id="h-help" data-i18n="helpTitle">A little help.</h2><p data-i18n="helpIntro">Answers to the things that can get in the way.</p><a href="#setup" data-i18n="backSetup">Back to setup</a></div>
+      <div class="questions">
+        <details name="help"><summary data-i18n="faq1Title">My Mac doesn’t appear</summary><p data-i18n="faq1Body">Check that both devices are on the same network. Open Helper → “Pair a Phone…”. If macOS asks about the local network, click “Allow”.</p></details>
+        <details name="help"><summary data-i18n="faq2Title">Connected, but the cursor won’t move</summary><p data-i18n="faq2Body">Turn on CursorApp Helper in System Settings → Privacy &amp; Security → Accessibility.</p></details>
+        <details name="help"><summary data-i18n="faq3Title">My Mac stopped responding after an update</summary><p data-i18n="faq3Body">In Accessibility, remove CursorApp Helper with the “−” button, then add it again from Applications. This also applies when switching from a self-built copy.</p></details>
+        <details name="help"><summary data-i18n="faq4Title">Login and updates</summary><p data-i18n="faq4Body">You’ll find “Open at Login” and “Check for Updates…” in the Helper menu.</p></details>
+        <details name="help"><summary data-i18n="faq5Title">Uninstall Helper</summary><p data-i18n="faq5Body">Quit Helper from its menu and delete it from Applications. If needed, remove it in System Settings → General → Login Items. The keychain item is called “Vl.CursorAppHelper”.</p></details>
+        <details name="help"><summary data-i18n="faq6Title">Signing and download verification</summary><p data-i18n="faq6Body">Helper is signed with Developer ID “Vladislav Sukhov (Y3SRRD5QMG)” and notarized by Apple. Every update is signed with EdDSA and verified before unpacking.</p><div id="sha-box" hidden><p data-i18n="hashLabel">Download SHA-256:</p><code id="sha" dir="ltr"></code><p data-i18n="hashInstructions">Run shasum -a 256 path/to/file.dmg in Terminal and compare the result.</p></div></details>
+      </div>
+    </div>
   </section>
+  <section class="privacy" aria-labelledby="h-privacy"><div class="frame privacy-layout"><h2 id="h-privacy" data-i18n="privacyTitle">No analytics.</h2><div><p data-i18n="privacyBody">This page uses no external fonts, scripts or analytics. Helper’s update checks share your IP address and app version with GitHub.</p><a href="../privacy/" id="privacy-link" data-i18n="privacyLink">Privacy policy</a></div></div></section>
 </main>
-<footer><span>CursorApp Helper</span><a href="../privacy/" data-localized-link><span lang="ru">Конфиденциальность</span><span lang="en">Privacy</span></a></footer>
+<footer class="frame"><a href="#main" class="footer-wordmark" dir="ltr">CursorApp</a><span data-i18n="footerLabel">Helper for Mac</span><a href="https://github.com/AllFatherAI/cursorapp-site/releases" data-i18n="releases">Releases on GitHub</a></footer>
 </body>
 </html>
