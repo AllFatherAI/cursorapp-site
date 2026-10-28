@@ -1,12 +1,14 @@
 # Website UI assets
 
-The page uses one complete native view of CursorApp’s real trackpad, media controls and eight Mac shortcuts. No generated device photograph, invented UI, enlarged detail crops or partial portrait remains.
+The page uses one complete native view of CursorApp’s real trackpad, media controls and eight Mac shortcuts, plus three lossless crops of that same capture. No generated device photograph or invented UI is used.
 
 - `mac-shortcuts-en.webp`, `mac-shortcuts-ru.webp`: Xcode RenderPreview captures in English and Russian, 1500 × 900 pixels. They render the actual production `RemoteTopBar`, `BlockStack`, `SurfaceWithVolume`, `ComputerLayoutView`, default Mac dock/media/shortcut blocks and Slate tokens in a supported split composition.
 - This is a source-rendered production-component preview, not a live paired session. Connection name “Studio” and awake/connected values are illustrative preview data. Command closures are inert and haptics disabled. No purchase, entitlement, network or device state is changed.
 - A static panel header mirrors the production split-panel header. The controls themselves are the real components, not redrawn website controls.
-- Lossless WebP decoding matches every RGBA pixel in the native PNG captures. No cropping, resizing, retouching or text replacement was performed. The site scales the entire image proportionally.
+- Lossless WebP decoding matches every RGBA pixel in the native PNG captures. The full captures were not cropped, resized, retouched or text-replaced. The site scales each image proportionally.
 - English and Russian pages use their matching capture. Other page locales show the real English capture; no claim is made that the screenshot pixels are translated into all eleven languages.
+- `mac-trackpad-*.webp` (652 × 596), `mac-panel-*.webp` (630 × 578), `mac-dock-*.webp` (652 × 148): lossless crops of the two captures above at capture pixels (x, y) = (96, 124), (793, 42) and (96, 728). Pixels are copied, not scaled or retouched; the crop script decoded each file back and compared it with the source region. The landing page shows the trackpad crop as the surface of its live demo, the panel crop beside the shortcut list and the dock crop beside the dock list.
+- `fonts/Geist-Variable.woff2`: Geist 1.5.1 by Vercel from the `geist` npm package, SIL Open Font License 1.1 (`fonts/Geist-OFL.txt`). Self-hosted under the page’s self-only CSP. It covers Latin and Cyrillic; other scripts and the ⌘ ⌃ ⌥ key symbols fall back to the system font.
 - `brand-mark.svg` is the website’s authored monochrome pointer sign, matching the inline header mark. The header uses one CursorApp wordmark without the old app-icon tile and Helper suffix.
 
 ## Reproducible composition
