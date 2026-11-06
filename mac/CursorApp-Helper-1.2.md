@@ -1,0 +1,20 @@
+<!-- sparkle-sign-warning:
+IMPORTANT: This file was signed by Sparkle. Any modifications to this file requires updating signatures in appcasts that reference this file! This will involve re-running generate_appcast or sign_update.
+-->
+## CursorApp Helper 1.2
+
+- Text you type on your phone now syncs with fields in Chrome, Claude, Slack, VS Code and other apps built on Chromium or Electron.
+- Sync no longer drops for a moment when an app is slow to answer.
+- Text you select on the Mac shows up in the phone's chat, ready to edit or delete.
+
+Requires macOS 14 or later and Accessibility access.
+
+---
+
+## CursorApp Helper 1.2 (по-русски)
+
+- Текст с телефона теперь синхронизируется с полями в Chrome, Claude, Slack, VS Code и других приложениях на Chromium и Electron.
+- Синхронизация больше не пропадает на мгновение, когда приложение медленно отвечает.
+- Текст, выделенный на Mac, появляется в чате на телефоне: его можно поправить или стереть.
+
+Нужны macOS 14 или новее и доступ «Универсальный доступ».

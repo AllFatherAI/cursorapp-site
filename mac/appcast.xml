@@ -6,6 +6,16 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
     <channel>
         <title>CursorApp Helper</title>
         <item>
+            <title>1.2</title>
+            <pubDate>Thu, 05 Nov 2026 16:54:37 -0800</pubDate>
+            <sparkle:channel>staging</sparkle:channel>
+            <sparkle:version>1004</sparkle:version>
+            <sparkle:shortVersionString>1.2</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <sparkle:releaseNotesLink sparkle:edSignature="+S22FWul0bi0xH2hxHdcNP3iVHx1gO8/iOezTDqRMC0YQnu/3J43CSLeXk8y+xUXeMJG6jHki1DNro9cJ092Cg==" sparkle:length="1262">https://allfatherai.github.io/cursorapp-site/mac/CursorApp-Helper-1.2.md</sparkle:releaseNotesLink>
+            <enclosure url="https://github.com/AllFatherAI/cursorapp-site/releases/download/helper-1.2/CursorApp-Helper-1.2.dmg" length="1925086" type="application/octet-stream" sparkle:edSignature="H/kjxUqOw3X7D2mIDBxFjgHEu5wJC7+VxmJ/sJyZjDf54+ycuZ79OFwJpKES9Or/1rny/EDaSrDMFIc8+VpzDA=="/>
+        </item>
+        <item>
             <title>1.1</title>
             <pubDate>Tue, 27 Oct 2026 22:25:16 -0700</pubDate>
             <sparkle:version>1002</sparkle:version>
@@ -35,6 +45,6 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
         </item>
     </channel>
 </rss><!-- sparkle-signatures:
-edSignature: c0K4rVCSyHxtgKGUrxV/4Lw7GtPg6LKWgKYoqUEBTmfzFxJiiZtBK12TYNPhrP6eR50XVRWDSPTzxMMuIfzFDg==
-length: 3184
+edSignature: e0Q8TCqPN+kH+jGt5RX8jB2xAPWJ+oulnSlSxny4MO825Nf4vJcton3xWLv1ffV0CToR8zpLDlH+T8LnXs2PBg==
+length: 4129
 -->
